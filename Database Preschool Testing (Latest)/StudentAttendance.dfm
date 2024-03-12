@@ -164,7 +164,7 @@ object Form2: TForm2
   object lbl6: TLabel
     Left = 209
     Top = 13
-    Width = 632
+    Width = 623
     Height = 75
     Caption = 'Student Attendance'
     Font.Charset = ANSI_CHARSET
@@ -196,29 +196,32 @@ object Form2: TForm2
     ParentFont = False
     TabOrder = 1
     object lbl2: TLabel
-      Left = 272
-      Top = 16
-      Width = 8
+      Left = 200
+      Top = 87
+      Width = 64
       Height = 37
+      Caption = 'joey'
     end
     object lbl3: TLabel
-      Left = 16
-      Top = 16
-      Width = 8
+      Left = 200
+      Top = 18
+      Width = 64
       Height = 37
+      Caption = 'joey'
     end
     object lbl4: TLabel
-      Left = 16
-      Top = 104
-      Width = 8
+      Left = 200
+      Top = 161
+      Width = 64
       Height = 37
+      Caption = 'joey'
     end
     object lbl5: TLabel
-      Left = 16
-      Top = 192
-      Width = 57
+      Left = 200
+      Top = 232
+      Width = 64
       Height = 37
-      Caption = 'lbl5'
+      Caption = 'joey'
     end
     object img4: TImage
       Left = 440
@@ -312,9 +315,37 @@ object Form2: TForm2
       Visible = False
       OnClick = img4Click
     end
+    object lbl7: TLabel
+      Left = 16
+      Top = 18
+      Width = 178
+      Height = 37
+      Caption = 'First Name:'
+    end
+    object lbl8: TLabel
+      Left = 20
+      Top = 89
+      Width = 174
+      Height = 37
+      Caption = 'Last Name:'
+    end
+    object lbl9: TLabel
+      Left = 16
+      Top = 161
+      Width = 164
+      Height = 37
+      Caption = 'StudentID:'
+    end
+    object lbl10: TLabel
+      Left = 16
+      Top = 232
+      Width = 83
+      Height = 37
+      Caption = 'Date:'
+    end
     object chk1: TCheckBox
       Left = 16
-      Top = 280
+      Top = 304
       Width = 233
       Height = 57
       Caption = 'Late'
@@ -322,45 +353,45 @@ object Form2: TForm2
       Visible = False
       StyleName = 'Windows'
     end
-  end
-  object edt1: TEdit
-    Left = 223
-    Top = 111
-    Width = 186
-    Height = 40
-    TabOrder = 2
-    Text = 'edt1'
-    Visible = False
-    OnChange = edt1Change
-  end
-  object edt2: TEdit
-    Left = 479
-    Top = 111
-    Width = 121
-    Height = 40
-    TabOrder = 3
-    Text = 'edt2'
-    Visible = False
-    OnChange = edt2Change
-  end
-  object edt3: TEdit
-    Left = 223
-    Top = 199
-    Width = 186
-    Height = 40
-    NumbersOnly = True
-    TabOrder = 4
-    Text = 'edt3'
-    Visible = False
-  end
-  object edt4: TEdit
-    Left = 223
-    Top = 283
-    Width = 186
-    Height = 40
-    TabOrder = 5
-    Text = 'edt4'
-    Visible = False
+    object edt1: TEdit
+      Left = 200
+      Top = 15
+      Width = 186
+      Height = 40
+      TabOrder = 1
+      Text = 'edt1'
+      Visible = False
+      OnChange = edt1Change
+    end
+    object edt2: TEdit
+      Left = 200
+      Top = 89
+      Width = 121
+      Height = 40
+      TabOrder = 2
+      Text = 'edt2'
+      Visible = False
+      OnChange = edt2Change
+    end
+    object edt3: TEdit
+      Left = 200
+      Top = 161
+      Width = 186
+      Height = 40
+      NumbersOnly = True
+      TabOrder = 3
+      Text = 'edt3'
+      Visible = False
+    end
+    object edt4: TEdit
+      Left = 200
+      Top = 229
+      Width = 186
+      Height = 40
+      TabOrder = 4
+      Text = 'edt4'
+      Visible = False
+    end
   end
   object qry1: TADOQuery
     Connection = DataModule2.con1

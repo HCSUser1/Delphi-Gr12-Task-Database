@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 573
-  ClientWidth = 946
+  ClientHeight = 626
+  ClientWidth = 978
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -159,6 +159,7 @@ object Form1: TForm1
       2B9416C5FB28CF248A55273D099EC9D9BAFF02F3B9BE1C1562AF3D0000000049
       454E44AE426082}
     Stretch = True
+    OnClick = img2Click
   end
   object lbl6: TLabel
     Left = 209
@@ -180,122 +181,326 @@ object Form1: TForm1
     Height = 40
     Style = csDropDownList
     TabOrder = 0
+    OnChange = cbb1Change
   end
   object pnl1: TPanel
     Left = 207
     Top = 86
-    Width = 731
-    Height = 479
+    Width = 763
+    Height = 532
     TabOrder = 1
-    object lbl7: TLabel
-      Left = 368
-      Top = 184
-      Width = 47
+    object lblFirstName: TLabel
+      Left = 16
+      Top = 16
+      Width = 7
       Height = 32
-      Caption = 'lbl7'
     end
-    object lbl8: TLabel
-      Left = 440
-      Top = 96
-      Width = 47
+    object lblLastName: TLabel
+      Left = 186
+      Top = 16
+      Width = 7
       Height = 32
-      Caption = 'lbl8'
     end
-    object lbl9: TLabel
-      Left = 600
-      Top = 136
-      Width = 47
+    object lblEmail: TLabel
+      Left = 446
+      Top = 152
+      Width = 7
       Height = 32
-      Caption = 'lbl9'
     end
-    object lbl10: TLabel
-      Left = 384
-      Top = 248
-      Width = 63
+    object lblStudentID: TLabel
+      Left = 382
+      Top = 16
+      Width = 7
       Height = 32
-      Caption = 'lbl10'
     end
-    object lbl11: TLabel
-      Left = 264
-      Top = 256
-      Width = 63
+    object lblDateOfBirth: TLabel
+      Left = 186
+      Top = 84
+      Width = 71
       Height = 32
-      Caption = 'lbl11'
     end
-    object lbl12: TLabel
-      Left = 200
-      Top = 112
-      Width = 63
+    object lblIDNumber: TLabel
+      Left = 16
+      Top = 84
+      Width = 7
       Height = 32
-      Caption = 'lbl12'
     end
-    object lbl13: TLabel
-      Left = 328
-      Top = 344
-      Width = 63
+    object lblHomePhone: TLabel
+      Left = 16
+      Top = 152
+      Width = 7
       Height = 32
-      Caption = 'lbl13'
     end
-    object lbl14: TLabel
-      Left = 480
-      Top = 360
-      Width = 63
+    object lblMobilePhone: TLabel
+      Left = 250
+      Top = 152
+      Width = 7
       Height = 32
-      Caption = 'lbl14'
     end
-    object lbl15: TLabel
-      Left = 184
-      Top = 224
-      Width = 63
+    object lblAddress: TLabel
+      Left = 16
+      Top = 220
+      Width = 7
       Height = 32
-      Caption = 'lbl15'
     end
-    object lbl16: TLabel
-      Left = 192
-      Top = 336
-      Width = 63
+    object lblCity: TLabel
+      Left = 250
+      Top = 220
+      Width = 7
       Height = 32
-      Caption = 'lbl16'
     end
-    object lbl17: TLabel
-      Left = 48
-      Top = 264
-      Width = 63
+    object lblZIP: TLabel
+      Left = 446
+      Top = 220
+      Width = 7
       Height = 32
-      Caption = 'lbl17'
     end
-    object lbl18: TLabel
-      Left = 344
-      Top = 72
-      Width = 63
+    object lblAllergies: TLabel
+      Left = 382
+      Top = 288
+      Width = 7
       Height = 32
-      Caption = 'lbl18'
     end
-    object cbb2: TComboBox
-      Left = 552
-      Top = 256
+    object lblMedications: TLabel
+      Left = 16
+      Top = 288
+      Width = 7
+      Height = 32
+    end
+    object imgSave: TImage
+      Left = 568
+      Top = 451
+      Width = 185
+      Height = 70
+      Picture.Data = {
+        0954506E67496D61676589504E470D0A1A0A0000000D49484452000000B60000
+        00420806000000FAF32C0B00000A1D4944415478DAED9D795415D71DC7BF0F10
+        11880B2E282A246EC135B81B974483892891A8C7BAC593B671EB49BA98D6348D
+        B5A9CDD2B44D9A98AD69A2363D56134DD55803D1286AC5B883A251890B8A0489
+        0A2AA8C822F8FAFB71799D99C743200FDEF8E6FC3EFF3077E6CECC9D99CFDCFB
+        BB77867936BBDD0E9714E735C5C9654F206BD323C849EE87C20BA1100433F169
+        588CC0D6E711D2F36B84C726E0EE71EBCAD32EB05512FBE6F56024BFF022D23E
+        9883D21B81661F8B2054896F4011FAFCEE25F49AF73A7CFD4BF48B8C62E7A646
+        2171E26A5C4DEF68769905A1C6348F4AC5188A2C1AB5CC71CCD2C4CE3BD105EB
+        87EC44516E0BB3CB2908B526383C13B18923D1A4F3494E2AB139FC58DB3705F9
+        24B720782BAD06ED41DC8E61F0F12B5562EF9ABB0847DEFA85D9E51204B7E9FF
+        C7F9E8FDFCAB36FBD58C08ACEC980E7B99AFD9651204B709A038FBF1AC76367B
+        EA6BF3B0F7D9D7CC2E8F20D419D1AB26DBEC1B62E39199106B765904A1CE889C
+        FDA1CDBE222203D7CF46985D1641A8335A0DDC6BB32F092844595180D9651184
+        3AC3B751A1CDFE01ECEE6F4910EE2C446CC19288D8822511B1054B22620B9644
+        C4162C89882D5812115BB02422B66049446CC19288D8822511B1054B22627B82
+        5EF38041BA57DE773D031C596476A92C8D778A3D3E1968D9574B7F7C0F703DC3
+        75DEDE0B80FE2F696933A412B13D8E88ED09446C8F23627B024F88DD710A10FD
+        899ADEFC03E0CC6ACF1EE31D8688ED097AFD8AC47EBD7ECB307A23D07E949A16
+        B1456C8FD0FDA7C09077EAAF0C8161C0B44CC0A7E2430322B6885DCE8C22C0B7
+        A19AFEF231E06C3CD0ED2740E40CA0C9BD80BD0CC83DA8D6CB58E77A3F012DD4
+        BE22E280A0B640491EF05D1270E06520A43BF0D08ADB97A1451FA00309D97A18
+        EDB30BD0B02970EB2650900D5CD80DA4FD9DFEEEAABCDF7631EAA669D2A9EAF3
+        B5712C90196F9CC7FBE1630C1D02340AA5632CA573F82D90BD95CAF636907FC2
+        E397B52E11B119BDD8C7DE27A99A53CC3AC9F5F60ED0B6925F30CEBB8BF63F96
+        240E6E57393FCB7988E2EBDEF3AB2E43971F01C33FAAFEB89317D2FEFFA0A53B
+        4EA5B8FAE3EAD7D38B6DA35A7DC8BB4AEAAA282B0676D0F213FFACD9F5B80311
+        B119BDD835E1F311541BFFB7226103E2BEA21A7070CDD7772E837F13606A86AA
+        A519BE198A72693EA5FD1A19D7FDCF50AAB977AAE9CE4F0003FF42F9EEA27CBA
+        0FE316E729391D6C9B0E9C4B54D303FE0C44FD5A5BC6FBBA728CBF5CAA5A0A9B
+        AD623EB55209D1749CDBDDBB5626216233CE6273F3BFFB97147EA4502D1C010C
+        A6FC213DB4E5DF52476DC36835DD6638D5D6DB8CDB3BFC26708A428F862124DF
+        E35423FFD0B8DC551978E424381C485F05E4EC27B14A28666E00F4A3B2473DA7
+        E53BFA3760E7D3C675B963CA1D540755C5D8C17703534E69B138871EF124EFD5
+        932ADD9A6E9A315F6A37C979BA61D70FABE78B593F88D88CB3D8F12329D6DCA2
+        A539D49892AEABCDA896FB07D592B78A2B4B757A0D9038D1B8FDE855C6D0A636
+        9D47BEB1A6E98E4D7F5339A8A9D851140E0D78454B27CD06BE596CCC33F82DA0
+        C7CFD5B4FD16B0AC25B50097BFEF95320D119BD18BCDD22E0D549D293D135254
+        07CFC1EAFB80CB87550DD7EE116DFE863124DF06E3BADC291CF9E9EDCBD08C5A
+        848E9381560354CD1A10C2DFC75021828FEEB38AD9141AC40F37AE5B53B147AD
+        A7CEED582D9DF905853C39C63C4D23F983335A7A2D9DE7DC037574E13C8735C4
+        FEA40370ED8CEBBC7DA8A3D74FD7E1AA4EECC28BC0BF5CFC2A89B3148E38DBB9
+        2CAB488CFCE3C6755994717BAA28830F75E6DEA6CEDC535A8B703BDC117BDC3E
+        2A4BFFDA9DEBCF877B659CED9D62C7ED50F1A08335BD814BA9AEF30E7A832EFA
+        335A3A691635BF4B8C79F4621751B3BBAC79E5EDC450ED16AE0B0138F6E418D4
+        B9265FD98962D674E3BA2D48FC09C95A5A2F76378A9787BEAB2DBB452DC599B5
+        B46D3AC68273AAC6D68F7CB823B6F34D587A835AA66A2E3F873D5C162FC33BC5
+        1EF96F6ADE7571AC2B591D948F580CD1D25F8C02B23619F3E8C5E60BFD11C5CF
+        A505C63C1329EC08E9A9A51D35736C22D0365A9B1FFF10C9E7D4990CA79A3E66
+        BD96D68BFDD86E207490B6ECABA7D490A3030E4BA6E95A2377C476BE39D752ED
+        9D9B0C2BE29D6277FF996ABE1DF070D567D4DC975E37E60B23E162376B4D7C69
+        21B09C1F9E5C31E673EE3C6E990AA4AFD4D24DBB01938E6AE992AB54ABB750F1
+        F8FD6F023DE76ACBD2A833B663B671FB43DF378E1BEBC5E62786C1EDB5652B68
+        BA204B4BEBDF01615C89ED3C84B775BA1A9571C6392C4BA5F5F6FDA6DE2F9719
+        78A7D8FC0065EA69C0BFB1362FFF94EAE1F35F5F7FF5442D7226E0A7FBDEE637
+        4BA9769F59797BCE62975C03F6CFA72678A7926ED05F8D4FF64E538B915831CA
+        D1F661BA79742D008F24F0431CBE31F86108771CB903ABEF00EAC5766E09B653
+        F98E2F55D3A18355EB1414A62D7725F67DCF0103FFA4A539444A9AA3428D665D
+        29BCBA04E4EC53A33B938FAB614486C7AA596C6E211C2D945FB01A93EF40C777
+        716FE551132FC13BC5666AFAB4CE41FE49AAD507A847DDCED4E6010D8BBB8662
+        EACB872A6650E76FFC3E63EC5A1D7AB1EFA7BF3D9D7E2585C797B93C8D5A555E
+        D795D8FC783C2EA9EAFDED7916385CF112569FDF53ADBDD0E9984881C20B4A78
+        1E7B77B4705EFC7AADF78ACDDCFBA47A4FC2AF9A9FA33CB7956AC21F933099AE
+        97EBC5BE44C29695B81E3D28FFBD1E92F0E83BC6F93C443676BB6B114BF2A976
+        A7706274029D6D1F354F2F4C601BD501E5BF5595FD5A06B53E4FAAB42BB19947
+        295FD808D7DBD08BCDF4A570A4CF02AD3C5521629B08BFC0D375B60A0958307E
+        2C7D939AD51BDFA9A6F4F4A7EAA1C6ED0E532FF695343576CB9DB14ED380C61D
+        949C39294A0E7E49C8152C26D786E1B14AF0626AFEB328BE4F59A88622F5AF95
+        3A0B1344E14EBF1769790CFF860A95FFAA2A07C7C9691FAA3068529ACA5B95D8
+        7E412A86BE67827A82C94F2E79E8F2E21EE01095FBD241637E7EB9ABEB1C7533
+        34A610A5017598CBE83CDC384FC79AACCE5B66829AE78578BFD875815E6CBEB0
+        CBDBB8B73DC174446CC62036C59ACB5B9B5D22C14D446C46C4B61C223623625B
+        0E119B11B12D8788CD88D89643C4162C89882D5812115BB02422B66049446CC1
+        9288D8822511B105EB11D032C7665F167A1E851742DDDF9A20DC21B47970BBCD
+        9E10B301591B63CC2E8B20D41991B316DBEC694B662069E612F7B72608770831
+        F18FDAEC370B02B1AC650E4A6F04BABF45413019FFA679989E1D66B3F3BF3BED
+        5FF0320EBEF25BB3CB24086EF3C0E259889CB944895D56E28F35BD0F22EF5837
+        B3CB2508DF9BB011DB10BB251A369B5D89CDE49FEC8C848737E3FAD908B3CB27
+        08B5A6598F23884B7A000D9B957F3446139B29C80EC3A671EB90B3BF961F7813
+        041369F3E0768C583E1DC1EDFEFFA521A3D8CCAD523F7CBD682E52162E446941
+        90D96516842A090CCB46D4F3AFA2FBD3EF71F8A15F54596C0725F94D90BD6D04
+        CE7C36BE3C3CB97CA4078A2F35AFC9FE04A15EF00B2A4008851CCDA352D13E66
+        23C26313E0D3E0A6ABACFF03C068370F1BCF5C890000000049454E44AE426082}
+      Visible = False
+    end
+    object cbbGrade: TComboBox
+      Left = 560
+      Top = 13
       Width = 145
       Height = 40
+      Style = csDropDownList
       TabOrder = 0
-      Text = 'cbb2'
     end
-    object mmo1: TMemo
-      Left = 9
-      Top = 109
-      Width = 185
-      Height = 89
-      Lines.Strings = (
-        'mmo1')
+    object mmoNotes: TMemo
+      Left = 16
+      Top = 356
+      Width = 209
+      Height = 165
+      ReadOnly = True
       TabOrder = 1
     end
-    object mmo2: TMemo
-      Left = 24
-      Top = 374
-      Width = 185
-      Height = 89
-      Lines.Strings = (
-        'mmo2')
+    object mmoSpecialCircumstances: TMemo
+      Left = 240
+      Top = 356
+      Width = 233
+      Height = 165
+      ReadOnly = True
       TabOrder = 2
+    end
+    object edtFirstName: TEdit
+      Left = 16
+      Top = 13
+      Width = 121
+      Height = 40
+      TabOrder = 3
+      Text = 'First Name'
+      Visible = False
+    end
+    object edtLastName: TEdit
+      Left = 186
+      Top = 13
+      Width = 121
+      Height = 40
+      TabOrder = 4
+      Text = 'Last Name'
+      Visible = False
+    end
+    object edtStudentID: TEdit
+      Left = 382
+      Top = 13
+      Width = 121
+      Height = 40
+      NumbersOnly = True
+      TabOrder = 5
+      Text = 'StudentID'
+      Visible = False
+    end
+    object edtIDNumber: TEdit
+      Left = 16
+      Top = 81
+      Width = 121
+      Height = 40
+      NumbersOnly = True
+      TabOrder = 6
+      Text = 'IDNumber'
+      Visible = False
+    end
+    object edtDateOfBirth: TEdit
+      Left = 186
+      Top = 81
+      Width = 121
+      Height = 40
+      TabOrder = 7
+      Text = 'DateOfBirth'
+      Visible = False
+    end
+    object edtHomePhone: TEdit
+      Left = 16
+      Top = 149
+      Width = 121
+      Height = 40
+      NumbersOnly = True
+      TabOrder = 8
+      Text = 'Home Phone'
+      Visible = False
+    end
+    object edtMobilePhone: TEdit
+      Left = 250
+      Top = 149
+      Width = 121
+      Height = 40
+      TabOrder = 9
+      Text = 'Mobile Phone'
+      Visible = False
+    end
+    object edtEmail: TEdit
+      Left = 446
+      Top = 149
+      Width = 121
+      Height = 40
+      TabOrder = 10
+      Text = 'Email Address'
+      Visible = False
+    end
+    object edtAddress: TEdit
+      Left = 16
+      Top = 217
+      Width = 121
+      Height = 40
+      TabOrder = 11
+      Text = 'Address'
+      Visible = False
+    end
+    object edtCity: TEdit
+      Left = 250
+      Top = 217
+      Width = 121
+      Height = 40
+      TabOrder = 12
+      Text = 'City'
+      Visible = False
+    end
+    object edtZIP: TEdit
+      Left = 446
+      Top = 217
+      Width = 121
+      Height = 40
+      TabOrder = 13
+      Text = 'ZIP'
+      Visible = False
+    end
+    object edtMedications: TEdit
+      Left = 16
+      Top = 285
+      Width = 121
+      Height = 40
+      TabOrder = 14
+      Text = 'Medications'
+      Visible = False
+    end
+    object edtAllergies: TEdit
+      Left = 382
+      Top = 285
+      Width = 121
+      Height = 40
+      TabOrder = 15
+      Text = 'Allergies'
+      Visible = False
     end
   end
   object qry1: TADOQuery

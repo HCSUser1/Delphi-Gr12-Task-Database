@@ -20,12 +20,16 @@ type
     chk1: TCheckBox;
     img1: TImage;
     img2: TImage;
+    img4: TImage;
+    lbl6: TLabel;
     edt1: TEdit;
     edt2: TEdit;
     edt3: TEdit;
     edt4: TEdit;
-    img4: TImage;
-    lbl6: TLabel;
+    lbl7: TLabel;
+    lbl8: TLabel;
+    lbl9: TLabel;
+    lbl10: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure cbb1Change(Sender: TObject);
