@@ -2,11 +2,11 @@ object DataModule2: TDataModule2
   Height = 480
   Width = 640
   object con1: TADOConnection
-    Connected = True
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Projects\Databas' +
-      'e Preschool Testing (3)\Database7.mdb;Persist Security Info=Fals' +
-      'e'
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\HCS 1\Docu' +
+      'ments\Embarcadero\Studio\Projects\Delphi-Gr12-Task-Database\Data' +
+      'base Preschool Testing (Latest)\Database7.mdb;Persist Security I' +
+      'nfo=False'
     LoginPrompt = False
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
@@ -14,7 +14,6 @@ object DataModule2: TDataModule2
     Top = 16
   end
   object tbl1: TADOTable
-    Active = True
     Connection = con1
     CursorType = ctStatic
     TableName = 'Students'
@@ -27,7 +26,6 @@ object DataModule2: TDataModule2
     Top = 80
   end
   object tbl2: TADOTable
-    Active = True
     Connection = con1
     CursorType = ctStatic
     MasterSource = ds1

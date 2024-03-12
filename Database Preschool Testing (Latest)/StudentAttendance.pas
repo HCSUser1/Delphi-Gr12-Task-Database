@@ -20,12 +20,12 @@ type
     chk1: TCheckBox;
     img1: TImage;
     img2: TImage;
-    img3: TImage;
     edt1: TEdit;
     edt2: TEdit;
     edt3: TEdit;
     edt4: TEdit;
     img4: TImage;
+    lbl6: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure cbb1Change(Sender: TObject);
@@ -34,6 +34,7 @@ type
     procedure tmr1Timer(Sender: TObject);
     procedure edt1Change(Sender: TObject);
     procedure edt2Change(Sender: TObject);
+    procedure img1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -145,6 +146,65 @@ begin
       Qry1.Next;
     end;
   qry1.Close;
+
+end;
+
+procedure TForm2.img1Click(Sender: TObject);
+var
+  iConfirm : integer;
+begin
+
+iConfirm := MessageDlg('Are you sure you want DELETE this record?', mtConfirmation, [mbYes, mbNo], 0);
+  if iConfirm = mrYes then
+  begin
+    qry1.SQL.Text := 'Select * FROM StudentAttendance WHERE FirstName = ''' + Copy(cbb1.Text, 1, Pos(' ', cbb1.Text) - 1) + ''' OR LastName = ''' + Copy(cbb1.Text, Pos(' ', cbb1.Text) + 1, Length(cbb1.Text) - Pos(' ', cbb1.Text))  + '''';
+    qry1.Open;
+    qry1.Delete;
+    qry1.close;
+
+  // Refresh combobox
+      cbb1.Clear;
+      qry1.SQL.Text := 'SELECT FirstName, LastName, ID FROM StudentAttendance';
+      qry1.Open;
+      while not qry1.Eof do
+      begin
+        cbb1.Items.Add(qry1.FieldByName('FirstName').AsString + ' ' + qry1.FieldByName('LastName').AsString);
+        qry1.Next;
+      end;
+      qry1.Close;
+
+  if cbb1.Text = '' then
+      begin
+        lbl2.Visible := False;
+        lbl3.Visible := False;
+        lbl4.Visible := False;
+        lbl5.Visible := False;
+        edt1.Visible := False;
+        edt2.Visible := False;
+        edt3.Visible := False;
+        edt4.Visible := False;
+        img4.Visible := False;
+        chk1.Visible := False;
+      end
+      else
+      begin
+        lbl2.Visible := true;
+        lbl3.Visible := True;
+        lbl4.Visible := True;
+        lbl5.Visible := True;
+        edt1.Visible := False;
+        edt2.Visible := False;
+        edt3.Visible := False;
+        edt4.Visible := False;
+        img4.Visible := False;
+        chk1.Visible := True;
+      end;
+  end
+  else
+  begin
+
+  end;
+
 
 end;
 

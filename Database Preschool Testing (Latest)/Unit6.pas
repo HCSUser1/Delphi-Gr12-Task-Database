@@ -53,7 +53,7 @@ procedure TForm6.img3Click(Sender: TObject);
 begin
   Form1.Visible := true;
   Form6.Visible := false;
-  //
+
 end;
 
 procedure TForm6.tmr1Timer(Sender: TObject);
